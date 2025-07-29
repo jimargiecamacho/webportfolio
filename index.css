@@ -1,0 +1,77 @@
+nav a {
+	font-family: Montserrat;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: auto;
+	color: #9C9C9C;
+	text-decoration: none;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+.custom-navbar {
+	background-color: #D3D3D3;
+}
+
+.navbar-nav .nav-item {
+	margin: 0 25px;
+}
+
+#landing {
+	background: #E0E0E0;
+}
+
+#projects {
+	background: #E0E0E0;
+}
+
+#tools {
+	background: #E0E0E0;
+}
+
+#contact {
+	background: #E0E0E0;
+}
+
+
+#text-title {
+	font-family: Raleway;
+	font-weight: 800;
+	font-size: 44px;
+	line-height: auto;
+	color: #36454F;
+}
+
+#job-title {
+	font-family: Raleway;
+	font-weight: 800;
+	font-size: 24px;
+	line-height: auto;
+	color: #36454F;
+}
+
+#landing p {
+	font-family: Montserrat;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+}
+
+#projects p {
+	font-family: Montserrat;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.project-img {
+	width: 100%;           /* responsive to container */
+	max-height: 200px;     /* set a consistent height */
+	object-fit: cover;     /* crop to fill the box without stretching */
+	aspect-ratio: 4 / 3;   /* optional: keeps uniform shape */
+	border-radius: 8px;    /* optional: round corners for better look */
+}
