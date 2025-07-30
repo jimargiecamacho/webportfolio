@@ -15,6 +15,9 @@ a {
   background-color: #1e1e1e;
   padding: 1rem 0;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar .container {
@@ -34,15 +37,11 @@ a {
   font-weight: 500;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
 
 
-/* Sections */
+/* Global Section Padding */
 .section {
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
 }
 
 .container {
@@ -58,20 +57,22 @@ a {
   text-align: center;
 }
 
+/* Profile Image */
 .profile-img {
-  width: 200px;
-  border-radius: 100px;
+  max-width: 450px;   /* or adjust to your desired size */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.profile-photo {
-  max-width: 200px;
-}
 
+/* Trainee Info */
 #trainee {
   font-family: Montserrat;
   font-weight: 800;
   font-size: 44px;
-  line-height: auto;
   color: #36454F;
 }
 
@@ -79,8 +80,16 @@ a {
   font-family: Montserrat;
   font-weight: 800;
   font-size: 24px;
-  line-height: auto;
   color: #36454F;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin-bottom: 1rem;
 }
 
 /* Projects */
@@ -100,45 +109,85 @@ a {
   margin: 0.5rem 0;
 }
 
-/* Tools */
-.tools-list {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  line-height: 2;
+/* Tools Section */
+#tools {
+  background-color: #E0E0E0;
 }
 
-/* Contact */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
+.section-title {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.tool-category {
+  font-size: 1.25rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.contact-form button:hover {
-  background-color: #444;
+.tools-group {
+  padding-top: 1rem;
 }
+
+.tool-item {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tool-item img {
+  max-height: 80px !important; /* reduced from 80px */
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline-block !important;
+}
+
+.tool-icon {
+  max-height: 80px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+
+
+
+
+/* Contact Section */
+#contact {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+#contact h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-input {
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #212529;
+}
+
+.contact-input:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+.contact-btn {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+}
+
 
 /* Footer */
 footer {
@@ -148,19 +197,12 @@ footer {
   padding: 1rem 0;
 }
 
-
-#landing {
+/* Section Backgrounds & Spacing */
+#landing,
+#projects,
+#tools,
+#contact {
   background: #E0E0E0;
-}
-
-#projects {
-  background: #E0E0E0;
-}
-
-#tools {
-  background: #E0E0E0;
-}
-
-#contacts {
-  background: #E0E0E0;
+  padding-top: 7rem; /* adds space from sticky navbar */
+  padding-bottom: 5rem;
 }
