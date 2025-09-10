@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: 'Montserrat', monospace;
-  background-color: #ECEFF1;
+  background-image: linear-gradient(to right top, #2f1e33, #49394c, #645666, #817482, #9e949f, #9e949f, #9e949f, #9e949f, #817482, #645666, #49394c, #2f1e33);
+  background-attachment: fixed;
+  background-size: cover;
   color: #333;
 }
 
@@ -37,36 +39,39 @@ a {
   font-weight: 500;
 }
 
-
-
-/* Global Section Padding */
-.section {
-  padding: 6rem 1rem;
+/* Glass Effect Sections */
+.glass-section {
+  background: rgba(255, 255, 255, 0.15); /* lighter transparency for glassy look */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); /* soft glowing shadow */
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  overflow: hidden; /* keeps image corners aligned */
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  text-align: center;
-}
 
 /* Profile Image */
 .profile-img {
-  max-width: 450px;   /* or adjust to your desired size */
+  max-width: 450px;
   width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /* Trainee Info */
 #trainee {
@@ -92,28 +97,15 @@ a {
   margin-bottom: 1rem;
 }
 
-/* Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.project img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.project h3 {
-  margin: 0.5rem 0;
+.project-card img {
+  height: 200px;            /* fixed uniform height */
+  width: 100%;              /* full card width */
+  object-fit: cover;        /* crop to fill nicely */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 /* Tools Section */
-#tools {
-  background-color: #E0E0E0;
-}
-
 .section-title {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -138,7 +130,7 @@ a {
 }
 
 .tool-item img {
-  max-height: 80px !important; /* reduced from 80px */
+  max-height: 80px !important;
   max-width: 100% !important;
   width: auto !important;
   height: auto !important;
@@ -152,15 +144,7 @@ a {
   object-fit: contain !important;
 }
 
-
-
-
-
 /* Contact Section */
-#contact {
-  background-color: #f8f9fa; /* Light gray background */
-}
-
 #contact h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -188,21 +172,10 @@ a {
   border-radius: 0.375rem;
 }
 
-
 /* Footer */
 footer {
   background-color: #1e1e1e;
   color: white;
   text-align: center;
   padding: 1rem 0;
-}
-
-/* Section Backgrounds & Spacing */
-#landing,
-#projects,
-#tools,
-#contact {
-  background: #E0E0E0;
-  padding-top: 7rem; /* adds space from sticky navbar */
-  padding-bottom: 5rem;
 }
